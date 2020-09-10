@@ -1,0 +1,412 @@
+ /*selectores  CSS para el TP01 v04 Edgardo Marino*/
+
+/*uso de semántica html5 y CSS3*/
+
+*{border: 0; padding: 0;}
+
+html{ 
+    font-size: 16px;
+    }
+    
+@font-face{
+        src: url("../fonts/Brawler.otf");
+        font-family: 'Brawler';
+    }
+    
+main {  
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 4px solid red;
+      background-color: lightcyan;
+      display: flex;
+      flex-direction:column;
+      align-items: stretch;
+      }
+
+header {   
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:center;
+        padding: 1em;
+        }
+nav{ 
+    border-block-end:4px solid red;
+}
+
+.navbar {
+    font-family:'Brawler';
+    text-align: right;
+}
+
+/*Selectores anidados*/
+.navbar ul{
+	list-style-type: none;
+	}
+.navbar ul li{
+	display:inline;
+	}
+.navbar ul li a{
+                color: salmon;
+                text-decoration: none;
+                background: white;
+                padding: 0.5em;
+		}
+		/*pseudo-clase*/
+		/*solo funciona por medio de eventos*/
+		/*:hover evento sobre el elemento*/
+		/*:active soltar el clic al elemento*/
+		.navbar ul li a:hover{
+			background:salmon;
+			color: white;
+		}
+		.navbar ul li a:active{
+			background:violet;
+		}
+
+.titulo_home {
+              font-family: 'Brawler';
+              font-size: 25px;
+              align-items: center;
+              width:70vh;
+              margin:1em;
+              text-align: center; 
+              color: mediumblue;
+              }
+.logo {
+      width: 30vh;
+      height:20vh;
+      margin: 1em;
+      border: 2px solid gray;
+      background-image: url("../img/logo.jpg");
+      background-size: cover;
+      background-repeat: round; 
+      border-radius: 20px;
+      box-shadow: 10px 10px 20px grey;
+      }
+
+.titulo_receta{
+        font-family: 'Montserrat', sans-serif;
+              color: red;
+              text-align: center; 
+               }
+
+.dato_secundario {
+        font-family: 'Montserrat', sans-serif;
+                  text-align: center; 
+                  color: mediumvioletred;
+                  border-block-end:4px solid red;
+                  }
+
+.ingredientes{ 
+        font-family: 'Montserrat', sans-serif;
+              color: darkorchid;
+              text-align: center; 
+              border-block-end:4px solid red;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              }
+
+.img_ingredientes{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: stretch;       
+                }
+
+.imagen{   
+        height: 30vh;
+        margin: 4px;
+        padding: 2px;
+        box-shadow: 10px 10px 10px gainsboro;
+        }
+
+.caja1:hover{
+           filter: grayscale(0.5) blur(2px);
+        }
+
+.lista_ul { 
+          width: 30%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+          font-size: 1em;
+          color: darkorchid; 
+          }
+
+.instrucciones {
+        font-family: 'Montserrat', sans-serif;
+                color: blue;
+                text-align: center; 
+                }
+
+.imagen_instrucciones{   
+                      height: 40vh;
+                      padding: 3px;
+                      border: 4px double violet;                    
+                      box-shadow: 10px 10px 20px grey;
+                    }
+
+.caja2:hover{
+            filter: invert(30%);
+            }         
+
+.lista_ol { 
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+          font-size: 1em;
+          color:blue;
+          }
+
+footer {
+        border-top: 3px solid red;
+        color: deeppink;
+        text-align: center; 
+        }
+
+.imagen_plato_final{
+                    height: 40vh;
+                    padding: 3px;
+                    border:4px dotted green;
+                    }
+.caja3:hover{
+             filter: drop-shadow(10px 10px 20px blue);
+            }
+            
+/*Media Queries*/
+/*rango de ancho donde se va a 
+aplicar la modificación*/
+/*Pantallas pequeñas --> Small*/
+/*Pantallas medianas --> Medium*/
+/*Pantallas grandes --> Large*/
+/*Pantallas extra grandes --> Extra Large*/
+
+/*SM --> smart phoes, celulares, etc.*/
+
+@media screen and (min-width:0px) and (max-width: 500px){
+        /*CSS condicional que se aplicará si estamos en una pantalla que 
+        cumpla con el rango establecido */
+        
+        body{
+                background: rgb(17, 182, 25);
+        }
+     
+main {  
+        width: 99%;
+        }
+  
+  header {   
+          height: 25vh;
+        }
+  
+  .navbar {
+      font-family:'Brawler';
+      font-size: 0.9em;
+      text-align: center;
+  }
+  
+  .titulo_home {
+                width: 50%;
+                font-family: 'Brawler';
+                font-size: 1.2em;
+                }
+  .logo {
+        width: 50vh;
+        height:15vh;
+        }
+  
+  .titulo_receta{
+               font-size: 0.9em;
+                 }
+  
+  .dato_secundario {
+                font-size: 0.8em;
+                    }
+  
+  .ingredientes{ 
+                font-size: 0.9em;
+                }
+  
+  .imagen{
+          width: 20vh;
+          height: 20vh;
+          margin: 4px;
+          padding: 2px;
+          }
+  
+  .lista_ul { 
+            width: 70%;
+            margin-left: 30%;
+            }
+  
+  .instrucciones {
+                 font-size: 0.9em;
+                  }
+  
+  .imagen_instrucciones{
+                        width: 40vh;
+                        height: 25vh;
+                      }
+  
+  .lista_ol { 
+            width: 80%;
+            }
+  
+  footer {
+         font-size:0.9em;
+          }
+  
+  .imagen_plato_final{
+                      height: 30vh;
+                      }
+        
+}
+        
+/*Md Medium --> tablets, celulares horizontal*/
+@media screen and (min-width:501px) and (max-width:900px){
+        body{
+                 background: lightskyblue;
+         }
+    
+main {  
+         width: 95%;
+        }
+
+.titulo_home {
+                font-family: 'Brawler';
+                font-size: 25px;
+                width:40vh;
+                        }
+
+.imagen{
+        width: 30vh;
+        height: 25vh;
+        margin: 3px;
+        padding: 2px;
+                  }
+
+          .lista_ul { 
+                    width: 80%;
+                    margin-left: 30%;
+                    }
+          
+          .imagen_instrucciones{
+                                width: 50vh; 
+                                height: 40vh;
+                                padding: 3px;
+                              }
+          
+          .lista_ol { 
+                    width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    }
+}    
+        
+
+
+/*Lg Large --> tablets horizontales, desktop */
+@media screen and (min-width: 901px) and (max-width:1200px) {
+        body{
+                 background: gold;
+         }
+        }
+        
+/*XL --> desktop grandes (+1200 px)*/
+@media screen and (min-width: 1201px){
+         body{
+                 background: hotpink;
+         }
+         #contenedor{
+                 width: 1300px;
+         }
+
+         main {  
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                }
+          
+          .navbar {
+                font-size: 20px;
+          }
+          
+          /*Selectores anidados*/
+          .navbar ul{
+                  list-style-type: none;
+                  }
+          .navbar ul li{
+                  display:inline;
+                  }
+         
+          .titulo_home {
+                        font-size: 30px;
+                        }
+          .logo {
+                width: 40vh;
+                height:30vh;
+                margin: 2em;
+                border: 3px solid gray;
+                border-radius: 25px;
+                box-shadow: 10px 10px 30px grey;
+                }
+
+        .titulo_receta{
+                      font-family: 'Montserrat', sans-serif;
+                      font-size: 22px;
+                }
+                
+        .dato_secundario {
+                        font-size: 20px;
+                }
+                
+                .ingredientes{ 
+                        font-size: 18px;
+                        }
+                
+                .imagen{  
+                        width: 50vh;
+                        height: 40vh;
+                        box-shadow: 20px 20px 20px gainsboro;
+                        }
+                
+                .lista_ul { 
+                        width: 40%;
+                        margin-left: 40%;
+                        font-size: 18px;
+                        }
+                
+                .instrucciones {
+                        font-size: 18px;
+                        }
+                
+                .imagen_instrucciones{
+                                      width: 70vh;
+                                      height: 50vh;
+                                      padding: 3px;
+                                      border: 5px double violet;                    
+                                      box-shadow: 10px 10px 20px grey;
+                                    }
+                .lista_ol { 
+                          width: 70%;
+                          font-size: 18PX;
+                          }
+                
+                footer {
+                        font-size: 18PX;
+                        }
+                
+                .imagen_plato_final{
+                                    width: 60vh;
+                                    height: 50vh;
+                                    padding: 3px;
+                                    border:4px dotted green;
+                                    }
+        }
+        
+

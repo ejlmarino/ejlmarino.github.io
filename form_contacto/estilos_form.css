@@ -1,0 +1,36 @@
+*{margin:0;padding: 0; }
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+#contenedor{
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:2em;
+	padding: 1em;
+	background-color:lightseagreen;
+	border-radius: 6px;
+}
+
+/*form*/
+
+.form{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	color:white;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	}
+
+.form input,.form textarea{
+	width: 100%;
+	margin-bottom: 1em;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 6px;
+	border:none;
+	}
